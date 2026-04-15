@@ -1,0 +1,55 @@
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de Formulario</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 py-10">
+  <form method="POST" action="/register-event" class="max-w-lg mx-auto space-y-6 bg-white p-8 rounded-lg shadow-md">
+    <!-- Menú Desplegable de País -->
+    <div>
+      <label for="country" class="block mb-2 font-medium text-gray-700">País</label>
+      <select id="country" name="country" required class="w-full px-4 py-2 border border-gray-300 rounded-lg 
+             focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <option value="" disabled selected>Selecciona tu país</option>
+        <option value="us">Estados Unidos</option>
+        <option value="ca">Canadá</option>
+        <option value="uk">Reino Unido</option>
+        <option value="au">Australia</option>
+        <option value="de">Alemania</option>
+      </select>
+    </div>
+
+    <!-- Área de Texto para Solicitudes Especiales -->
+    <div>
+      <label for="special-requests" class="block mb-2 font-medium text-gray-700">Solicitudes Especiales</label>
+      <textarea id="special-requests" name="specialRequests" rows="4" maxlength="500"
+        placeholder="Restricciones dietéticas, necesidades de accesibilidad, etc." class="w-full px-4 py-2 border border-gray-300 rounded-lg 
+             focus:outline-none focus:ring-2 focus:ring-blue-500 resize-vertical"></textarea>
+      <p class="text-sm text-gray-500 mt-1">Máximo 500 caracteres</p>
+    </div>
+
+    <!-- Entrada de Fecha del Evento -->
+    <div>
+      <label for="event-date" class="block mb-2 font-medium text-gray-700">Fecha del Evento</label>
+      <input type="date" id="event-date" name="eventDate" required class="w-full px-4 py-2 border border-gray-300 rounded-lg 
+             focus:outline-none focus:ring-2 focus:ring-blue-500">
+    </div>
+
+    <!-- Entrada para Número de Entradas -->
+    <div>
+      <label for="tickets" class="block mb-2 font-medium text-gray-700">Número de Entradas</label>
+      <input type="number" id="tickets" name="tickets" min="1" max="10" value="1" required class="w-full px-4 py-2 border border-gray-300 rounded-lg 
+             focus:outline-none focus:ring-2 focus:ring-blue-500">
+    </div>
+
+    <!-- Botón de Envío -->
+    <button type="submit" class="w-full px-6 py-3 bg-blue-600 text-white rounded-lg 
+           hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      Registrarse
+    </button>
+  </form>
+</body>
+</html>
