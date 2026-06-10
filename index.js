@@ -41,5 +41,5 @@ function loginLogout() {
 function changeView() {
   isViewPassword = !isViewPassword
   inputPassword.type = isViewPassword ? 'text' : 'password'
-  spanPassword.innerHTML = isViewPassword ? 'Ocultar' : 'Ver'
+  spanPassword.innerHTML = isViewPassword ? '<i class="fas fa-eye-slash text-danger"></i>' : '<i class="fas fa-eye text-success"></i>'
 }
